@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Asesor Ultra Seco</title>
+    <style>
+        body { font-family: sans-serif; background: #f4f4f4; display: flex; justify-content: center; padding: 20px; }
+        .chat-container { width: 100%; max-width: 500px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); overflow: hidden; }
+        .header { background: #4a55a2; color: white; padding: 15px; text-align: center; font-weight: bold; }
+        #chat-box { height: 400px; overflow-y: auto; padding: 15px; display: flex; flex-direction: column; gap: 10px; }
+        .msg { padding: 10px; border-radius: 8px; max-width: 85%; line-height: 1.4; }
+        .user { align-self: flex-end; background: #e3efff; color: #222; }
+        .ai { align-self: flex-start; background: #f1f1f1; color: #333; }
+        .input-area { display: flex; border-top: 1px solid #ddd; padding: 10px; }
+        input { flex: 1; border: 1px solid #ccc; padding: 10px; border-radius: 5px; outline: none; }
+        button { background: #4a55a2; color: white; border: none; padding: 10px 15px; margin-left: 5px; border-radius: 5px; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<div class="chat-container">
+    <div class="header">Asesor Inteligente - Ultra Seco</div>
+    <div id="chat-box">
+        <div class="msg ai"><b>Asesor:</b> Hola, soy el experto de Ultra Seco. ¿Qué problema de humedad tienes hoy?</div>
+    </div>
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Escribe aquí..." onkeypress="revisarEnter(event)">
+        <button onclick="enviarMensaje()">ENVIAR</button>
+    </div>
+</div>
+
+<script src="asesor.js"></script>
+</body>
+</html>
